@@ -6,12 +6,12 @@
 
 void setup() {                
   Serial.begin(38400);
-  pinMode(8, INPUT);
+  pinMode(8, INPUT_PULLUP);
 }
 
 void loop()                     
 {
-  if (digitalRead(8) == HIGH) {
+  if (digitalRead(8) == LOW) {
     Serial.println("Button is not pressed...");
   } else {
     Serial.println("Button pressed!!!");
